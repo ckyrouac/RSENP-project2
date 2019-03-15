@@ -26,14 +26,14 @@
         <collision name='collision'>
             <origin xyz="0 0 0" rpy=" 0 0 0"/> 
             <geometry>
-                <box size=".4 .2 .1"/>
+                <box size=".6 .2 .1"/>
             </geometry>
         </collision>
   
         <visual name='chassis_visual'>
             <origin xyz="0 0 0" rpy=" 0 0 0"/>
             <geometry>
-                <box size=".4 .2 .1"/>
+                <box size=".6 .2 .1"/>
             </geometry>
         </visual>
   
@@ -157,7 +157,7 @@
 	</link>
 
     <joint type="fixed" name="camera_joint">
-        <origin xyz="0.2 0 0" rpy="0 0 0"/>
+        <origin xyz="0.3 0 0" rpy="0 0 0"/>
         <child link="camera"/>
         <parent link="chassis"/>
         <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -188,25 +188,25 @@
     </link>
 
     <joint type="fixed" name="hokuyo_joint">
-        <origin xyz="0.15 0 0.1" rpy="0 0 0"/>
+        <origin xyz="0.25 0 0.1" rpy="0 0 0"/>
         <child link="hokuyo"/>
         <parent link="chassis"/>
         <axis xyz="0 1 0" rpy="0 0 0"/>
     </joint>
 
 	<gazebo reference="left_wheel">
-		<material>Gazebo/Green</material>
+		<material>Gazebo/Gray</material>
 	</gazebo>
 
 	<gazebo reference="right_wheel">
-		<material>Gazebo/Green</material>
+		<material>Gazebo/Gray</material>
 	</gazebo>
 
 	<gazebo reference="chassis">
-		<material>Gazebo/Blue</material>
+		<material>Gazebo/Purple</material>
 	</gazebo>
 
 	<gazebo reference="camera">
-		<material>Gazebo/Red</material>
+		<material>Gazebo/Blue</material>
 	</gazebo>
 </robot>
